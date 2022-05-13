@@ -20,3 +20,6 @@ target_link_libraries(harris_detector ${OpenCV_LIBS})
 
 add_executable(panoroma tutorials/panoroma.cpp)
 target_link_libraries(panoroma ${OpenCV_LIBS})
+
+add_executable(distance_transform tutorials/distance_transform.cpp)
+target_link_libraries(distance_transform ${OpenCV_LIBS})
