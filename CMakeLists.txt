@@ -17,3 +17,6 @@ target_link_libraries(basic_drawing ${OpenCV_LIBS})
 
 add_executable(harris_detector tutorials/harris_detector.cpp)
 target_link_libraries(harris_detector ${OpenCV_LIBS})
+
+add_executable(panoroma tutorials/panoroma.cpp)
+target_link_libraries(panoroma ${OpenCV_LIBS})
