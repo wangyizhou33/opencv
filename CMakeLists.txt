@@ -4,5 +4,16 @@ project(hellow)
 set(CMAKE_CXX_STANDARD 17)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
+
+
 add_executable(hello hello.cpp)
 target_link_libraries(hello ${OpenCV_LIBS})
+
+add_executable(display_image tutorials/display_image.cpp)
+target_link_libraries(display_image ${OpenCV_LIBS})
+
+add_executable(basic_drawing tutorials/basic_drawing.cpp)
+target_link_libraries(basic_drawing ${OpenCV_LIBS})
+
+add_executable(harris_detector tutorials/harris_detector.cpp)
+target_link_libraries(harris_detector ${OpenCV_LIBS})
