@@ -35,5 +35,13 @@ int main()
     }
     //! [imsave]
 
+    //! convert cv mat to jpg or png
+    std::vector <uchar> buf;
+    cv::imencode(".jpg", img, buf);    // can also be .png
+    FILE* pFile;
+    pFile = fopen("file.jpg", "wb");
+    fwrite(buf.data(), 1, buf.size()*sizeof(uchar), pFile);
+    fclose(pFile);
+
     return 0;
 }
