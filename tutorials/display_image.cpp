@@ -2,6 +2,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
+#include "opencv2/imgproc.hpp"  // prydown
 
 #include <iostream>
 
@@ -22,6 +23,10 @@ int main()
         return 1;
     }
     //! [empty]
+
+    //! [downsampling]
+    cv::pyrDown( img, img, Size( img.cols/2, img.rows/2 ));
+    //! [downsampling]
 
     //! [imshow]
     imshow("Display window", img);
