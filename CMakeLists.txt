@@ -28,5 +28,8 @@ target_link_libraries(distance_transform ${OpenCV_LIBS})
 add_executable(optical_flow tutorials/optical_flow.cpp)
 target_link_libraries(optical_flow ${OpenCV_LIBS})
 
+add_executable(optical_flow_dense tutorials/optical_flow_dense.cpp)
+target_link_libraries(optical_flow_dense ${OpenCV_LIBS})
+
 add_executable(plot tutorials/plot.cpp)
 target_link_libraries(plot ${OpenCV_LIBS})
